@@ -8,13 +8,13 @@ def key_for_min_value(name_hash)
   #   if value < minimum
 
 def key_for_min_value(name_hash)
-  lowest_key = nil
-  lowest_value = nil
-  name_hash.each do |k, v|
-    if lowest_value == nil || v < lowest_value
-      lowest_value = v
-      lowest_key = k
+  lowkey = nil
+  lowval = nil
+  name_hash.each do |key, value|
+    if lowval == nil || value < lowval
+      lowval = value
+      lowkey = key
     end
   end
-  return lowest_key
+  return lowkey
 end
